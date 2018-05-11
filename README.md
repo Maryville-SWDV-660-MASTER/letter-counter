@@ -5,3 +5,4 @@ This program counts the number of vowels in an input phrase and reports the valu
 ```
 python letter_counter.py
 ```
+This tool has no real dependencies, it's just great
