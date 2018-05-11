@@ -1,30 +1,20 @@
 def getInputPhrase():
     return input("Enter your phrase: ").lower()
 
-def getVowelCount( phrase ):
-    vowelCount = 0
+def getTotalOccurrencesOfLettersToCount( phrase, lettersToCount ):
+    totalOccurrences = 0
     for character in phrase:
-        if character in ['a','e','i','o','u']:
-            vowelCount = vowelCount +1
-    return vowelCount
+        if character in lettersToCount:
+            totalOccurrences = totalOccurrences +1
+    return totalOccurrences
 
 def main():
-<<<<<<< HEAD
     print("This program counts the number of given letters in an input phrase.")
     
     lettersToCount = input("Enter the letters to count in the phrase (e.g., 'aeiou'): ").lower()
-    inputPhrase = input("Enter your phrase: ").lower()
-
-    totalOccurrencesOfLettersToCount = 0
-    for character in inputPhrase:
-        if character in lettersToCount:
-            totalOccurrencesOfLettersToCount = totalOccurrencesOfLettersToCount + 1
-=======
-    print("This program counts the number of vowels in an input phrase.")
     inputPhrase = getInputPhrase()
 
-    totalVowels = getVowelCount( inputPhrase )
->>>>>>> master
+    totalOccurrencesOfLettersToCount = getTotalOccurrencesOfLettersToCount( phrase, lettersToCount )
 
     print("Total occurences of '{}' in your phrase: {}".format( lettersToCount, totalOccurrencesOfLettersToCount))
 
